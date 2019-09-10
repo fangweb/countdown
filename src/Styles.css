@@ -1,0 +1,71 @@
+.countdown {
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+.reader {
+  padding: 0 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.reader-inner {
+  width: 15em;
+  background: rgb(96, 247, 237);
+  padding: 1em;
+  border-radius: 50%;
+  box-shadow: 0px 5px 0px 0px rgba(9,3,1,1);
+}
+
+.control {
+  padding: 2em 0;
+}
+
+.control span.title {
+  color: rgb(212, 252, 223);
+}
+
+.control-row {
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-time {
+  width: 13em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-play {
+  width: 13em;
+  display: flex;
+  justify-content: center;
+}
+
+.control-row .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-row .button {
+  background: rgb(96, 247, 237);
+  border-radius: 1em;
+  width: 3em; 
+  height: 3em;
+  box-shadow: 0px 3px 0px 0px rgba(9,3,1,1);
+  cursor: pointer;
+}
+
+.inner-play .button.margin-right {
+  margin-right: 1em;
+}
+
+.control-row .button:active {
+  transform: translate(0px, 2px);
+  box-shadow: none;
+}
+
+
+
