@@ -2,6 +2,14 @@ import React from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 function Reader({ state }) {
+  const minutes = Math.floor(state.countdownStateSeconds / 60);
+  let seconds = state.countdownStateSeconds % 60;
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+  const display = `${minutes}:${seconds}`;
+  const progress = 100 - Math.floor((state.countdownStateSeconds / state.startStateSeconds) * 100);
+
   return (
     <div className="reader">
       <div className="reader-inner">
@@ -13,7 +21,7 @@ function Reader({ state }) {
             textColor: 'rgb(212, 252, 223)',
             trailColor: 'rgb(34, 135, 128)'
           })}
-          value={3} maxValue={100} text={`1:36`} />
+          value={progress} maxValue={100} text={display} />
         </div>
     </div>
   );
